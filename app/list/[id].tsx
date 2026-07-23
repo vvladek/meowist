@@ -13,7 +13,7 @@ import {
 import DraggableFlatList, { RenderItemParams } from 'react-native-draggable-flatlist';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Animation, AppTheme, cardShadow, listItemSpacing } from '@/constants/app-theme';
+import { Animation, AppTheme, cardShadow } from '@/constants/app-theme';
 import { useTasks } from '@/context/TaskContext';
 import type { Task } from '@/types/tasks';
 
@@ -273,15 +273,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   topBar: {
-    paddingHorizontal: AppTheme.spacing.md,
+    paddingHorizontal: AppTheme.spacing.sm,
     paddingTop: AppTheme.spacing.sm,
   },
   backButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    gap: 6,
     paddingVertical: AppTheme.spacing.sm,
-    paddingHorizontal: AppTheme.spacing.sm,
+    paddingHorizontal: 11,
     alignSelf: 'flex-start',
   },
   backButtonPressed: {
@@ -293,7 +293,9 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   header: {
-    paddingHorizontal: AppTheme.spacing.lg,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: AppTheme.spacing.md,
     paddingBottom: AppTheme.spacing.md,
   },
   headerTitle: {
@@ -309,8 +311,7 @@ const styles = StyleSheet.create({
   },
   inputRow: {
     flexDirection: 'row',
-    paddingHorizontal: AppTheme.spacing.lg,
-    marginBottom: AppTheme.spacing.md,
+    paddingHorizontal: AppTheme.spacing.md,
     gap: AppTheme.spacing.sm,
   },
   input: {
@@ -342,20 +343,20 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   listContent: {
-    paddingHorizontal: AppTheme.spacing.lg,
+    paddingHorizontal: AppTheme.spacing.md,
+    paddingTop: 16,
     paddingBottom: 100,
   },
   taskItemWrapper: {
-    marginBottom: listItemSpacing,
+    marginBottom: 6,
   },
   taskRow: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: AppTheme.card,
     borderRadius: AppTheme.radius,
-    paddingVertical: 14,
-    paddingHorizontal: AppTheme.spacing.sm,
-    gap: AppTheme.spacing.sm,
+    paddingVertical: 10,
+    paddingHorizontal: AppTheme.spacing.xs,
     minHeight: TASK_ROW_MIN_HEIGHT,
     ...cardShadow,
   },
@@ -372,6 +373,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: AppTheme.text,
     lineHeight: 22,
+    paddingLeft: 6,
   },
   taskTitleInput: {
     flex: 1,

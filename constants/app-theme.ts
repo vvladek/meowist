@@ -1,8 +1,8 @@
 export const AppTheme = {
   background: '#F8F9FA',
   card: '#FFFFFF',
-  primary: '#4A6CF7',
-  primaryLight: '#EEF1FE',
+  primary: '#3E9FB7',
+  primaryLight: '#EDF3F5',
   text: '#1A1D26',
   textSecondary: '#6B7280',
   border: '#E5E7EB',
@@ -34,8 +34,8 @@ export const Animation = {
     enter: 125,
     exit: 100,
   },
-  stackDuration: 75,
-  longPressDelay: 75,
+  stackDuration: 150,
+  longPressDelay: 150,
   dragSpring: {
     damping: 28,
     mass: 0.1,

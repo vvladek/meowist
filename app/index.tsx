@@ -132,7 +132,7 @@ function ListCard({
               style={({ pressed }) => [styles.deleteButton, pressed && styles.deletePressed]}>
               <Ionicons name="trash-outline" size={20} color={AppTheme.danger} />
             </Pressable>
-            <Ionicons name="chevron-forward" size={20} color={AppTheme.textSecondary} />
+            {/* <Ionicons name="chevron-forward" size={20} color={AppTheme.textSecondary} /> */}
           </>
         )}
       </Pressable>
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   header: {
-    paddingHorizontal: AppTheme.spacing.lg,
+    paddingHorizontal: AppTheme.spacing.md,
     paddingTop: AppTheme.spacing.md,
     paddingBottom: AppTheme.spacing.md,
   },
@@ -244,8 +244,7 @@ const styles = StyleSheet.create({
   },
   inputRow: {
     flexDirection: 'row',
-    paddingHorizontal: AppTheme.spacing.lg,
-    marginBottom: AppTheme.spacing.md,
+    paddingHorizontal: AppTheme.spacing.md,
     gap: AppTheme.spacing.sm,
   },
   input: {
@@ -272,8 +271,9 @@ const styles = StyleSheet.create({
     opacity: 0.85,
   },
   listContent: {
-    paddingHorizontal: AppTheme.spacing.lg,
+    paddingHorizontal: AppTheme.spacing.md,
     paddingBottom: AppTheme.spacing.xl,
+    paddingTop: 16,
   },
   cardWrapper: {
     marginBottom: listItemSpacing,
@@ -283,8 +283,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: AppTheme.card,
     borderRadius: AppTheme.radius,
-    padding: AppTheme.spacing.md,
-    gap: AppTheme.spacing.md,
+    padding: 14,
+    gap: AppTheme.spacing.sm,
     minHeight: 76,
     ...cardShadow,
   },
@@ -292,8 +292,8 @@ const styles = StyleSheet.create({
     opacity: 0.92,
   },
   cardIcon: {
-    width: 44,
-    height: 44,
+    width: 35,
+    height: 35,
     borderRadius: AppTheme.radiusSm,
     backgroundColor: AppTheme.primaryLight,
     alignItems: 'center',
@@ -302,6 +302,7 @@ const styles = StyleSheet.create({
   cardContent: {
     flex: 1,
     justifyContent: 'center',
+    paddingLeft: 12,
   },
   cardTitle: {
     fontSize: 17,
